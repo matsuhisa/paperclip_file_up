@@ -1,0 +1,29 @@
+<%= form_for(@imageing) do |f| %>
+  <% if @imageing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@imageing.errors.count, "error") %> prohibited this imageing from being saved:</h2>
+
+      <ul>
+      <% @imageing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :parent_id %><br>
+    <%= f.text_field :parent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_type %><br>
+    <%= f.text_field :parent_type %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

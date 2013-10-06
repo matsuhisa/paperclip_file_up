@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @attach.photo(:large) %>
+<%= image_tag @attach.photo(:thumb) %>
+
+
+<p>
+  <strong>File:</strong>
+  <%= @attach.file %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @attach.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @attach.description %>
+</p>
+
+<%= link_to 'Edit', edit_attach_path(@attach) %> |
+<%= link_to 'Back', attaches_path %>

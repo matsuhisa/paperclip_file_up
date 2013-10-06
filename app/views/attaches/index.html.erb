@@ -1,0 +1,31 @@
+<h1>Listing attaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attaches.each do |attach| %>
+      <tr>
+        <td><%= attach.file %></td>
+        <td><%= attach.title %></td>
+        <td><%= attach.description %></td>
+        <td><%= link_to 'Show', attach %></td>
+        <td><%= link_to 'Edit', edit_attach_path(attach) %></td>
+        <td><%= link_to 'Destroy', attach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attach', new_attach_path %>

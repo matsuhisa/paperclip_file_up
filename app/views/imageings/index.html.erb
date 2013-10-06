@@ -1,0 +1,31 @@
+<h1>Listing imageings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parent</th>
+      <th>Parent</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imageings.each do |imageing| %>
+      <tr>
+        <td><%= imageing.parent_id %></td>
+        <td><%= imageing.parent %></td>
+        <td><%= imageing.status %></td>
+        <td><%= link_to 'Show', imageing %></td>
+        <td><%= link_to 'Edit', edit_imageing_path(imageing) %></td>
+        <td><%= link_to 'Destroy', imageing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imageing', new_imageing_path %>

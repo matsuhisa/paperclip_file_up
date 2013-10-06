@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @imageing.parent_id %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @imageing.parent %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @imageing.status %>
+</p>
+
+<%= link_to 'Edit', edit_imageing_path(@imageing) %> |
+<%= link_to 'Back', imageings_path %>
